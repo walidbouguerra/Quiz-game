@@ -1,2 +1,2 @@
-# quiz-game
+# Quiz Game
 first javascript project
