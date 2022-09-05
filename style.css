@@ -1,4 +1,4 @@
-/* ALL */
+/* GENERAL */
 *{
     box-sizing: border-box;
     margin: 0;
@@ -14,21 +14,28 @@ body{
     background: rgb(49, 49, 49);
 }
 
+button{
+    cursor: pointer;
+}
+
 /* QUIZ CONTAINER */
 .quiz-container{
     height: 500px;
     width: 450px;
-    background: rgb(206, 125, 100);
+    background: rgb(226, 225, 225);
     padding: 20px;
-    border-radius: 4px;
+    border-radius: 10px;
     border: 2px solid black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 /* START MENU */
 .start-menu{
     height: 100%;
     text-align: center;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 h1{
@@ -37,23 +44,78 @@ h1{
 }
 
 .play-button{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    padding: 15px 30px;
+    margin: 0 auto;
+    padding: 20px 40px;
     border-radius: 100px;
     border: 2px solid black;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
 }
 
 /* QUIZ GAME */
+.quiz-game{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
 
-/* JS */
+.question-text{
+    font-size: 1.4rem;
+}
+
+.answer-text{
+    height: 22px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.buttons-grid{
+    display: grid;
+    grid-template: 50px 50px / 1fr 1fr ;
+    gap: 10px;
+}
+
+.buttons-grid button{
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    background: white;
+    border: 1px solid rgba(153, 151, 151, 0.74);
+}
+
+.next-question, .reset, .quit{
+    margin: 0 auto;
+    padding: 15px 30px;
+    border-radius: 50px;
+    background: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    border: 1px solid rgba(153, 151, 151, 0.74);
+}
+
+.question-number{
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
 .hidden{
     display: none;
 }
 
+.correct-answer{
+    border: 2px solid green !important;
+}
+
+.bad-answer{
+    border: 2px solid red !important;
+}
+
+.result{
+    justify-content: center;
+    gap: 50px;
+}
