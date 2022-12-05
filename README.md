@@ -1,2 +1,3 @@
-# Quiz Game
-first javascript project
+# Quiz game
+
+Quiz game with javacript.
